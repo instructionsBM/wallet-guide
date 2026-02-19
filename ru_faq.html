@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bromoney: Инструкция и FAQ</title>
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            max-width: 700px; 
+            margin: auto; 
+            padding: 20px; 
+            line-height: 1.6; 
+            color: #333;
+            background-color: #f0f2f5;
+        }
+        h1 { color: #2c3e50; text-align: center; margin-bottom: 30px; font-weight: 700; }
+        .faq-container { background: white; padding: 25px; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+        .question { 
+            background: #ffffff; 
+            padding: 20px; 
+            border-radius: 12px; 
+            margin-bottom: 25px; 
+            border: 1px solid #eef0f2;
+        }
+        .question h3 { margin-top: 0; color: #1a1a1a; font-size: 19px; border-bottom: 1px solid #f0f2f5; padding-bottom: 10px; }
+        .info-card { border: 2px solid #4285f4; border-radius: 12px; padding: 15px; margin: 15px 0; background: #fff; text-align: center; font-weight: 500; }
+        .warning-box { background-color: #fdf2e9; border-radius: 10px; padding: 15px; margin: 15px 0; display: flex; align-items: flex-start; gap: 10px; color: #a36b3d; font-size: 14px; }
+        .pill-button { display: inline-block; padding: 8px 16px; border: 1px solid #4285f4; border-radius: 20px; color: #4285f4; text-decoration: none; font-size: 14px; margin: 5px; font-weight: 500; }
+        .main-action-btn { display: block; width: 100%; background: #4285f4; color: white; text-align: center; padding: 14px; border-radius: 10px; text-decoration: none; font-weight: bold; margin-top: 20px; }
+        .sub-section { background: #f8f9fa; padding: 12px; border-radius: 8px; margin-top: 10px; border-left: 3px solid #4285f4; }
+        img { width: 100%; max-width: 400px; border-radius: 12px; margin: 15px 0; border: 1px solid #eee; display: block; }
+        ul { padding-left: 20px; }
+    </style>
+</head>
+<body>
+
+    <h1>Инструкция и FAQ</h1>
+
+    <div class="faq-container">
+        
+        <div class="question">
+            <h3>1) Как войти в кошелёк Bromoney?</h3>
+            <div class="answer">
+                <p>Зайдите по ссылке <a href="https://m.bromoney.net">https://m.bromoney.net</a>.</p>
+                <div class="warning-box">
+                    <span>⚠️</span>
+                    <span>Если ссылка не открывается, установите приложение.</span>
+                </div>
+                <div class="btn-group">
+                    <a href="https://apps.apple.com/ru/app/bromoney/id6479350832" class="pill-button">Для iPhone</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.bromoney.app&hl=ru" class="pill-button">Для Android</a>
+                </div>
+                <p>Выберите свой регион, введите номер. Введите 4-значный код, который поступил вам на WhatsApp. Создайте и запомните пароль.</p>
+                <img src="images/login.jpeg" alt="Экран входа в Bromoney">
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>2) Как сделать вывод средств из Bromoney?</h3>
+            <div class="answer">
+                <p>Чтобы снять деньги со счёта Bromoney, нажмите кнопку <strong>Вывести</strong> на главной странице.</p>
+                <p>Доступны всего два способа:</p>
+                <div class="sub-section">
+                    <strong>1) Крипто</strong><br>
+                    Нажмите кнопку «Крипто».<br>
+                    Вывод доступен только в USDT, в двух сетях: TON и BEP-20.<br>
+                    <strong>Способ</strong> — выберите сеть вашего кошелька.<br>
+                    <strong>Адрес</strong> — вставьте адрес кошелька.<br>
+                    После заполнения нажмите синюю кнопку «Сохранить» справа сверху. Введите сумму в долларах и нажмите «Продолжить».
+                </div>
+                <img src="images/crypto.jpeg" alt="Вывод в криптовалюту">
+                
+                <div class="sub-section">
+                    <strong>2) Деньги (на карту)</strong><br>
+                    <strong>Способ вывода</strong> — выберите банк.<br>
+                    <strong>Реквизиты</strong> — номер карты или номер телефона СБП.<br>
+                    <strong>Имя получателя</strong> — имя владельца карты.<br>
+                    <strong>Комментарий</strong> — по желанию.
+                </div>
+                <img src="images/fiat.jpeg" alt="Вывод на карту">
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>3) Как пополнить игровой счёт Олимп с кошелька Bromoney?</h3>
+            <div class="answer">
+                <p>Войдите в Олимп → Пополнение → выберите метод <strong>Bromoney</strong> → «Оплатить с баланса кошелька».</p>
+                <img src="images/topupolimp.jpeg" alt="Пополнение Олимп с Bromoney">
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>4) На какие банки доступен вывод?</h3>
+            <div class="answer">
+                <p><strong>Для пользователей КЗ:</strong> только Kaspi банк по номеру карты.</p>
+                <p><strong>Для РФ:</strong> любой банк.</p>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>5) Можно ли отменить заявку на выплату, которая уже создана?</h3>
+            <div class="answer">
+                <p>Если агент принял заявку и статус «В обработке», отменить её невозможно.</p>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>6) Какая минимальная сумма вывода?</h3>
+            <div class="answer">
+                <div class="btn-group">
+                    <span class="pill-button">Казахстан: 15 300 тенге</span>
+                    <span class="pill-button">Россия: 2 000 рублей</span>
+                </div>
+                <p>Лимиты могут увеличиваться в зависимости от доступности агентов. Также доступен вывод в криптовалюте и пополнение игрового счёта с баланса кошелька.</p>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>7) В течение какого времени поступят средства?</h3>
+            <div class="answer">
+                <p>• <strong>Через баланс кошелька:</strong> мгновенно.</p>
+                <p>• <strong>Через агента:</strong> в среднем 5–75 минут. Прикрепите чек и ФИО, чтобы ускорить проверку.</p>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>8) Почему невозможно пополнить кошелёк?</h3>
+            <div class="answer">
+                <p>Пополнение внутри самого кошелька невозможно. Пополняйте игровой счёт на стороне Олимп, выбрав метод «Перевод с карты на карту Bromoney».</p>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>9) Как удалить аккаунт?</h3>
+            <div class="answer">
+                <p>Зайдите в приложение Bromoney → в верхнем левом углу «Настройки» → <strong>Удалить аккаунт</strong>.</p>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>10) Почему не могу добавить реквизит, который ранее удалял?</h3>
+            <div class="answer">
+                <p>Реквизит уникален — один и тот же номер карты нельзя добавить дважды. Используйте карту близкого родственника или друга.</p>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>11) Почему меняется сумма на балансе кошелька Bromoney?</h3>
+            <div class="answer">
+                <p>Баланс привязан к цифровому доллару ($). Курс может меняться, поэтому сумма отличается от переведённой.</p>
+                <div class="warning-box">
+                    <span>💡</span>
+                    <span>При пополнении игрового счёта с баланса Bromoney комиссия не удерживается, но сумма может немного измениться из-за курса.</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
