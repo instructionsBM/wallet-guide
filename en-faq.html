@@ -12,35 +12,25 @@
             padding: 20px; 
             line-height: 1.6; 
             color: #333;
-            background-color: #f4f7f9;
+            background-color: #f0f2f5;
         }
-        h1 { color: #2c3e50; text-align: center; margin-bottom: 30px; }
-        .faq-container { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        h1 { color: #2c3e50; text-align: center; margin-bottom: 30px; font-weight: 700; }
+        .faq-container { background: white; padding: 25px; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
         .question { 
-            background: #f8f9fa; 
-            padding: 15px; 
-            border-radius: 8px; 
-            margin-bottom: 20px; 
-            border-left: 4px solid #3498db;
+            background: #ffffff; 
+            padding: 20px; 
+            border-radius: 12px; 
+            margin-bottom: 25px; 
+            border: 1px solid #eef0f2;
         }
-        .question h3 { margin-top: 0; color: #2980b9; font-size: 18px; line-height: 1.3; }
-        .answer { padding-left: 5px; }
-        .btn-group { display: flex; gap: 10px; margin: 15px 0; flex-wrap: wrap; }
-        .btn { 
-            display: inline-block; 
-            padding: 10px 15px; 
-            background: #3498db; 
-            color: white !important; 
-            text-decoration: none; 
-            border-radius: 6px; 
-            font-size: 14px;
-            font-weight: bold;
-        }
-        .btn-ios { background: #000; }
-        .btn-android { background: #3DDC84; color: #000 !important; }
-        .sub-section { background: #fff; padding: 10px; border-radius: 6px; margin-top: 10px; border: 1px solid #e1e4e8; }
+        .question h3 { margin-top: 0; color: #1a1a1a; font-size: 19px; border-bottom: 1px solid #f0f2f5; padding-bottom: 10px; }
+        .info-card { border: 2px solid #4285f4; border-radius: 12px; padding: 15px; margin: 15px 0; background: #fff; text-align: center; font-weight: 500; }
+        .warning-box { background-color: #fdf2e9; border-radius: 10px; padding: 15px; margin: 15px 0; display: flex; align-items: flex-start; gap: 10px; color: #a36b3d; font-size: 14px; }
+        .pill-button { display: inline-block; padding: 8px 16px; border: 1px solid #4285f4; border-radius: 20px; color: #4285f4; text-decoration: none; font-size: 14px; margin: 5px; font-weight: 500; }
+        .main-action-btn { display: block; width: 100%; background: #4285f4; color: white; text-align: center; padding: 14px; border-radius: 10px; text-decoration: none; font-weight: bold; margin-top: 20px; }
+        .sub-section { background: #f8f9fa; padding: 12px; border-radius: 8px; margin-top: 10px; border-left: 3px solid #4285f4; }
+        img { width: 100%; max-width: 400px; border-radius: 12px; margin: 15px 0; border: 1px solid #eee; display: block; }
         ul { padding-left: 20px; }
-        strong { color: #2c3e50; }
     </style>
 </head>
 <body>
@@ -53,86 +43,115 @@
             <h3>1) How do I login to my Bromoney wallet?</h3>
             <div class="answer">
                 <p>Go to <a href="https://m.bromoney.net">https://m.bromoney.net</a>.</p>
-                <p>If the link does not open, install the app:</p>
-                <div class="btn-group">
-                    <a href="https://apps.apple.com/kz/app/bromoney/id6479350832" class="btn btn-ios">Download for iPhone</a>
-                    <a href="https://play.google.com/store/apps/details?id=com.bromoney.app&hl=ru" class="btn btn-android">Download for Android</a>
+                <div class="warning-box">
+                    <span>⚠️</span>
+                    <span>If the link does not open, install the app.</span>
                 </div>
-                <p>Select your region, enter your number and the 4-digit code from WhatsApp. Create and remember your password.</p>
-                <img src="login.jpeg" alt="Логин" style="width: 100%; max-width: 400px; border-radius: 8px; margin: 10px 0; display: block;">
+                <div class="btn-group">
+                    <a href="https://apps.apple.com/kz/app/bromoney/id6479350832" class="pill-button">For iPhone</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.bromoney.app&hl=ru" class="pill-button">For Android</a>
+                </div>
+                <p>Select your region and enter your number. Enter the 4-digit code that you received on WhatsApp. Create and remember your password.</p>
+                <img src="login.jpeg" alt="Login screen">
             </div>
         </div>
 
         <div class="question">
             <h3>2) How to withdraw funds from Bromoney?</h3>
             <div class="answer">
-                <p>Click the <strong>Withdraw</strong> button on the main page, then click <strong>Add details</strong> (blue button). Select a method:</p>
-                
+                <p>To withdraw funds from your Bromoney account, click the <strong>Withdraw</strong> button on the main page.</p>
+                <div class="info-card">Click on the blue Add details button</div>
+                <p>There are only two methods:</p>
                 <div class="sub-section">
-                    <strong>1. Crypto:</strong> Withdrawals in USDT (TON or Bep-20). Select the network, paste your wallet address, and click "Save".
+                    <strong>1) Crypto</strong><br>
+                    Click on the Crypto button. Withdrawals are only available in USDT, on two networks: TON and Bep-20.<br>
+                    <strong>Method</strong> - select the network.<br>
+                    <strong>Address</strong> - paste your wallet address.<br>
+                    After that, click the blue Save button at the top right. Enter the amount and click Continue.
                 </div>
-                <img src="crypto.jpeg" alt="Крипта" style="width: 100%; max-width: 400px; border-radius: 8px; margin: 10px 0; display: block;">
+                <img src="crypto.jpeg" alt="Crypto withdrawal">
                 <div class="sub-section">
-                    <strong>2. Money:</strong> Select your bank, enter card/SBP number, and recipient name.
-                    <img src="fiat.jpeg" alt="Фиат" style="width: 100%; max-width: 400px; border-radius: 8px; margin: 10px 0; display: block;">
+                    <strong>2) Money</strong><br>
+                    <strong>Input method</strong> - select the bank.<br>
+                    <strong>Details</strong> - Card number or SBP phone number.<br>
+                    <strong>Recipient name</strong> - the name of the cardholder.<br>
+                    <strong>Comment</strong> - optional.
                 </div>
+                <img src="fiat.jpeg" alt="Money withdrawal">
             </div>
         </div>
 
         <div class="question">
-            <h3>3) How to top up Olimp from Bromoney?</h3>
+            <h3>3) How to top up your Olimp account from your Bromoney wallet?</h3>
             <div class="answer">
-                <p>Log in to <strong>Olimp</strong> -> Top up -> Select <strong>Bromoney</strong> -> Pay from your wallet balance.</p>
-                <img src="topupolimp.jpeg" alt="Пополнить олимп" style="width: 100%; max-width: 400px; border-radius: 8px; margin: 10px 0; display: block;">
+                <p>You can top up your gaming account from your wallet balance. To do this, log in to <strong>Olimp -> top up -> select Bromoney</strong> as your payment method -> pay from your wallet balance.</p>
+                <img src="topupolimp.jpeg" alt="Top up Olimp">
             </div>
         </div>
 
         <div class="question">
-            <h3>4) Available banks for withdrawals</h3>
+            <h3>4) Which banks are available for withdrawals?</h3>
             <div class="answer">
-                <ul>
-                    <li><strong>Kazakhstan:</strong> Kaspi Bank (by card number).</li>
-                    <li><strong>Russia:</strong> Any bank.</li>
-                </ul>
+                <p><strong>For KZ users:</strong> only Kaspibank by card number.</p>
+                <p><strong>For the Russian Federation:</strong> any bank.</p>
             </div>
         </div>
 
         <div class="question">
-            <h3>5) Minimum withdrawal amount</h3>
+            <h3>5) Is it possible to cancel a payment request that has already been created?</h3>
             <div class="answer">
-                <ul>
-                    <li>For Kaspi Bank (KZ): <strong>15,300 tenge</strong>.</li>
-                    <li>For Russia: <strong>2,000 rubles</strong>.</li>
-                </ul>
+                <p>If the agent has accepted the request and the request status is “in progress,” it cannot be canceled.</p>
             </div>
         </div>
 
         <div class="question">
-            <h3>6) How long does it take?</h3>
+            <h3>6) What is the minimum withdrawal amount?</h3>
             <div class="answer">
-                <p>From wallet balance: <strong>Instantly</strong>.</p>
-                <p>Through an agent: <strong>5 to 75 minutes</strong>. Attach a receipt to speed up verification.</p>
+                <div class="btn-group">
+                    <span class="pill-button">Kazakhstan: 15,300 tenge</span>
+                    <span class="pill-button">Russia: 2,000 rubles</span>
+                </div>
+                <p>Withdrawal limits may increase depending on agent availability. Withdrawals in cryptocurrency are also available.</p>
             </div>
         </div>
 
         <div class="question">
-            <h3>7) Why can't I top up my wallet?</h3>
+            <h3>7) How long will it take for the funds to arrive?</h3>
             <div class="answer">
-                <p>Top-ups are not possible inside the wallet. Use the <strong>"Transfer to Bromoney card"</strong> method on the partner's site (Olimp).</p>
+                <p>• <strong>Replenishing through balance:</strong> funds arrive instantly.</p>
+                <p>• <strong>Replenishing through an agent:</strong> average time is 5 to 75 minutes. Attach a receipt and your full name to speed up the verification.</p>
             </div>
         </div>
 
         <div class="question">
-            <h3>8) How do I delete my account?</h3>
+            <h3>8) Why can't I top up my wallet?</h3>
             <div class="answer">
-                <p>App -> Settings (top left corner) -> <strong>Delete account</strong>.</p>
+                <p>It is not possible to top up within the wallet itself. You can top up your gaming account on the partner's side (Olimp) by selecting the method <strong>Transfer from card to Bromoney card</strong>.</p>
             </div>
         </div>
 
         <div class="question">
-            <h3>9) Why does my balance change?</h3>
+            <h3>9) How do I delete my account?</h3>
             <div class="answer">
-                <p>The balance is tied to the <strong>digital $ (USDT)</strong>. The amount may vary slightly due to exchange rate changes.</p>
+                <p>Go to the Bromoney app -> settings in the upper left corner -> <strong>Delete account</strong>.</p>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>10) Why can't I add details that were previously deleted?</h3>
+            <div class="answer">
+                <p>Details are unique; you cannot add the same details twice. You can specify the card number of a friend or relative.</p>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>11) Why does the balance in my Bromoney wallet change?</h3>
+            <div class="answer">
+                <p>The Bromoney balance is tied to the <strong>digital $</strong>. The amount may differ because the exchange rate may change.</p>
+                <div class="warning-box">
+                    <span>💡</span>
+                    <span>If you top up your gaming account from Bromoney, you will not be charged a commission.</span>
+                </div>
             </div>
         </div>
 
