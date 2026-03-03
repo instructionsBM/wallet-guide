@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐼</text></svg>">
+    
     <title>Инструкция / Нұсқаулық</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -54,10 +56,10 @@
         </h3>
 
         <div class="flex flex-wrap gap-4 mb-12">
-            <a href="https://apps.apple.com/ru/app/bromoney/id6479350832" class="bg-black text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition">
+            <a href="https://apps.apple.com/ru/app/bromoney/id6479350832" target="_blank" class="bg-black text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition">
                 iOS
             </a>
-            <a href="https://play.google.com/store/apps/details?id=com.bromoney.app&hl=en" class="btn btn-android" class="bg-[#68d391] text-[#1a202c] px-8 py-3 rounded-lg font-semibold hover:bg-[#58c17e] transition">
+            <a href="https://play.google.com/store/apps/details?id=com.bromoney.app&hl=en" target="_blank" class="bg-[#68d391] text-[#1a202c] px-8 py-3 rounded-lg font-semibold hover:bg-[#58c17e] transition">
                 Android
             </a>
         </div>
@@ -75,7 +77,7 @@
                     <span class="lang-kk">Техникалық сұрақтар бойынша</span>
                 </p>
                 
-                <a href="https://t.me/BromSupportKZ_bot" id="bot-link" class="inline-flex items-center text-[#3182ce] font-semibold">
+                <a href="https://t.me/BroMoneySupport_bot" id="bot-link" target="_blank" class="inline-flex items-center text-[#3182ce] font-semibold">
                     <span class="lang-ru">Написать в Telegram →</span>
                     <span class="lang-kk">Telegram-ға жазу →</span>
                 </a>
@@ -100,11 +102,11 @@
     <script>
         const config = {
             ru: {
-                bot: "https://t.me/BroMoneySupport_bot", // Ссылка на РУССКОГО бота
+                bot: "https://t.me/BroMoneySupport_bot",
                 email: "belkinsdev@gmail.com"
             },
             kk: {
-                bot: "https://t.me/BromSupportKZ_bot", // Ссылка на КАЗАХСКОГО бота
+                bot: "https://t.me/BromSupportKZ_bot",
                 email: "belkinsdev@gmail.com"
             }
         };
@@ -116,7 +118,6 @@
             const btnKk = document.getElementById('btn-kk');
             const botLink = document.getElementById('bot-link');
             
-            // Обновляем ссылку бота
             botLink.href = config[lang].bot;
 
             if (lang === 'kk') {
