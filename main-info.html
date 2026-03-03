@@ -33,7 +33,7 @@
             <div class="lang-ru">
                 <p class="text-lg leading-relaxed mb-4">
                     При выводе с сервиса деньги попадают на кошелек <strong>Bromoney</strong> — 
-                    <a href="https://m2.bromoney.net" class="text-[#3182ce] hover:underline">m2.bromoney.net</a>
+                    <a href="https://m2.bromoney.net" class="text-[#3182ce] hover:underline" target="_blank">m2.bromoney.net</a>
                 </p>
                 <p class="text-lg leading-relaxed">
                     Чтобы в него войти, введите ваш <strong>номер телефона</strong> и создайте <strong>пароль</strong>.
@@ -42,7 +42,7 @@
             <div class="lang-kk">
                 <p class="text-lg leading-relaxed mb-4">
                     Сервистен шығарған кезде қаражат <strong>Bromoney</strong> әмиянына түседі — 
-                    <a href="https://m2.bromoney.net" class="text-[#3182ce] hover:underline">m2.bromoney.net</a>
+                    <a href="https://m2.bromoney.net" class="text-[#3182ce] hover:underline" target="_blank">m2.bromoney.net</a>
                 </p>
                 <p class="text-lg leading-relaxed">
                     Кіру үшін <strong>телефон нөміріңізді</strong> енгізіп, <strong>құпия сөз</strong> жасаңыз.
@@ -76,7 +76,6 @@
                     <span class="lang-ru">По техническим вопросам</span>
                     <span class="lang-kk">Техникалық сұрақтар бойынша</span>
                 </p>
-                
                 <a href="https://t.me/BroMoneySupport_bot" id="bot-link" target="_blank" class="inline-flex items-center text-[#3182ce] font-semibold">
                     <span class="lang-ru">Написать в Telegram →</span>
                     <span class="lang-kk">Telegram-ға жазу →</span>
@@ -92,9 +91,13 @@
                     <span class="lang-ru">По вопросам сотрудничества</span>
                     <span class="lang-kk">Ынтымақтастық мәселелері бойынша</span>
                 </p>
-                <a href="mailto:belkinsdev@gmail.com" class="inline-flex items-center text-[#3182ce] font-semibold">
-                    Email →
-                </a>
+                <div class="flex items-center gap-2 flex-wrap">
+                    <span id="email-text" class="text-[#1a202c] font-semibold bg-gray-100 px-2 py-1 rounded border border-gray-200">belkinsdev@gmail.com</span>
+                    <button onclick="copyEmail()" class="text-[#3182ce] text-sm font-bold hover:text-blue-800 transition">
+                        <span id="copy-status-ru" class="lang-ru">Копировать</span>
+                        <span id="copy-status-kk" class="lang-kk" style="display:none">Көшіру</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -102,12 +105,10 @@
     <script>
         const config = {
             ru: {
-                bot: "https://t.me/BroMoneySupport_bot",
-                email: "mailto:belkinsdev@gmail.com"
+                bot: "https://t.me/BroMoneySupport_bot"
             },
             kk: {
-                bot: "https://t.me/BromSupportKZ_bot",
-                email: "mailto:belkinsdev@gmail.com"
+                bot: "https://t.me/BromSupportKZ_bot"
             }
         };
 
@@ -135,6 +136,26 @@
                 btnKk.classList.remove('text-blue-600', 'border-b-2', 'border-blue-600');
                 btnKk.classList.add('text-gray-400');
             }
+        }
+
+        // Функция копирования почты
+        function copyEmail() {
+            const email = document.getElementById('email-text').innerText;
+            const btnRu = document.getElementById('copy-status-ru');
+            const btnKk = document.getElementById('copy-status-kk');
+
+            navigator.clipboard.writeText(email).then(() => {
+                const oldRu = btnRu.innerText;
+                const oldKk = btnKk.innerText;
+
+                btnRu.innerText = "Скопировано!";
+                btnKk.innerText = "Көшірілді!";
+
+                setTimeout(() => {
+                    btnRu.innerText = oldRu;
+                    btnKk.innerText = oldKk;
+                }, 2000);
+            });
         }
 
         window.onload = () => {
